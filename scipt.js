@@ -6,7 +6,7 @@ fetch('data.json')
     afficherSlogan(data) //Etant donné que c une boucle on appelle pas le nom du tableau
     afficherProduits(data.produits); // étant donné quec une boucle donc on écrit le nom du tableau (on peut lécrire ici ou dans le code d'en bas)
     afficherQualite(data.qualite);
-    afficherAvis(data.clients); 
+    afficherAvis(data.clients);
 
 
   });
@@ -15,12 +15,12 @@ fetch('data.json')
 //return : rien
 
 function afficherSlogan(tableauDatas) {
- 
-    let nomEntreprise = tableauDatas.nomEntreprise
-    let slogan = tableauDatas.slogan
-    let bouton = tableauDatas.bouton
 
-    document.getElementById("cover").innerHTML += `
+  let nomEntreprise = tableauDatas.nomEntreprise
+  let slogan = tableauDatas.slogan
+  let bouton = tableauDatas.bouton
+
+  document.getElementById("cover").innerHTML += `
      
             <div>
                 <img class="cover" src="asset/392ad45c1eae17df.jpg" alt="Photo des petit gâteau">
@@ -58,7 +58,7 @@ function afficherProduits(tableauPoduits) {
                     
                 </div>
                 `
-                //On a pas besoin de citer tout le produit, un suffit car c une boucle
+    //On a pas besoin de citer tout le produit, un suffit car c une boucle
   });
 }
 
@@ -67,7 +67,7 @@ function afficherProduits(tableauPoduits) {
 //return : 
 function afficherQualite(tableauQualite) {
   tableauQualite.forEach(qualite => {
-    
+
 
 
     document.getElementById("qualites").innerHTML += `
@@ -85,12 +85,12 @@ function afficherQualite(tableauQualite) {
 // paramtre :
 // return :
 function afficherAvis(tableauAvis) {
-  tableauAvis.forEach (avis=>{
-    let nom=avis.nom
-    let typePrestation=avis.typePrestation
-    let commentaire=avis.commentaire
-    let note=avis.note
-  
+  tableauAvis.forEach(avis => {
+    let nom = avis.nom
+    let typePrestation = avis.typePrestation
+    let commentaire = avis.commentaire
+    let note = avis.note
+
     document.getElementById("avis").innerHTML += `
 
                 <div class="carteavis alignCenter col ">
@@ -108,6 +108,20 @@ function afficherAvis(tableauAvis) {
                   
     
   `
-});
+  });
 };
 
+
+// Role : transformer des notes en etoiles (pleines et vides)
+//parametre : des notes
+// return: etoiles vide ou/et pleine
+function afficherEtoile(note) {
+  // ★☆
+  if (note == 5) {
+    return "★★★★★"
+  } else if (note == 4)
+    return "★★★★"
+  else if (note == 3)
+  return "★★★★"
+    return ""
+}
