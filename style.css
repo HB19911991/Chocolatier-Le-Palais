@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: black;
@@ -25,7 +25,12 @@
     padding-bottom: 20px;
 
 }
-
+.carte {
+    width: 35%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -44,9 +49,9 @@ h3 {
 }
 
 .h2main {
-    margin-top: 70px;
+    margin-top: 40px;
     margin-bottom: 50px;
-    margin-left:43% ;
+    margin-left: 42%;
     font-size: 40px;
     padding-top: 45px;
 }
@@ -121,30 +126,21 @@ header {
     padding-bottom: 25px;
     position: relative;
     top: -45px;
-    left: 44.5%;
+    left: 44%;
 }
-
 
 /*Produits*/
 
 .imgsize {
-    width:  350px;
+    width: 100%;
     height: 400px;
     border-radius: 4px 4px 0px 0px;
+    object-fit: cover;
 }
 
-
-.carte {
-    width: 35%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 50px;
-}
 
 .textecarte {
-    width: 75%;
-    margin-left: 10%;
-    margin-right: 10px;
+    width: 100%;
     padding-left: 10PX;
     padding-top: 20px;
     padding-right: 10px;
@@ -157,6 +153,7 @@ header {
 
 }
 
+/*QUALITE*/
 .margi {
     margin-left: 15%;
     margin-right: 30%;
@@ -174,9 +171,38 @@ header {
     font-style: italic;
 }
 
+/*SERVICE*/
+.textecarteservice {
+    width: 100%;    
+    padding-left: 10PX;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: 160;
+    position: relative;
+    top: -4px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.btn2 {
+    background-color: rgba(137, 96, 19, 0.539);
+    margin-top: 10px ;
+    border-radius: 20px 20px 20px 20px;
+    
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+        padding-top:10px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+   
+}
+
 /*AVIS*/
 .carteavis {
-    width: 28%;
+    width: 27%;
     margin-left: 2%;
     margin-right: 2%;
     border-radius: 20px;
@@ -192,6 +218,10 @@ header {
 
 }
 
-.margBot100{
+.margBot100 {
     margin-bottom: 100px;
+}
+.texteita{
+    font-style: italic;
+    font-weight: bold;
 }
